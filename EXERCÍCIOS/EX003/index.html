@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>links</title>
+    <style>
+        body
+        {
+            background-color: rgb(32, 143, 151);
+        }
+    </style>
+</head>
+<body>
+   <h1>
+       Usando link externos
+   </h1>
+   <p>Você pode acessar o meu <a href="https://www.twitch.tv/jac0nne" target="_blank" rel="nofollow">canal da twitch</a> </p> <!--nesse caso eu criei um link que abre uma outra janela para meu canal, usando "_blank" e "external"-->
+   <br>
+   <p>Você pode acessar <a href="https://www.instagram.com/lucas.jaconne/">instagram</a></p> <!--ja aqui, o link fecha a primeira aba, e abre uma outra, o que não é aconselhavel-->
+   <br>
+   <br>
+   <br>
+   <h1>Usando links internos</h1>
+   <p>Esa é a primeira página do meu site, se vc quiser acessar a segunda, pode acessar essa <a href="pag002.html"rel="next">segunda página</a></p> <!--nesse caso, eu criei um link que me leva para um site interno, usando rel="next" e next="prev", net para ir, e prev pra voltar-->
+
+   <p>
+    você pode tambem ir pra minha <a href="Nova pasta/pag003.html" target="_blank" rel="dofollow">terceira página</a>
+   </p> <!--se voce quiser ir pra um link que está em uma outra pasta, basta apertar ctrl + espaço e selecionar seu destino, quando voce vai para o link, pra voltar pro link de origem "index.html", basta colocar "../" + o local que voce retorna-->
+   <br>
+   <br>
+   <h2>Download de links</h2>
+   <ul>
+       <li><a href="download/after.zip"  type="application/zip" target="_blank">baixar o livro em pdf</a></li> <!--neste código, vamos encontrar o local do arquivo usando o esquema de pasta visto acima, depois colocamos os padões download e/ou type, dependendo do seu navegador, sabendo que o type tem uma lista com vários tipos. Para ficar organizado, eu usei o target para abri uma nova guia-->
+       <li><a href="download/pdf.pdf" type="application/pdf" target="_blank">livro compactado em zip</a></li> <!--o pdf n quer abrir-->
+   </ul>
+</body>
+</html>

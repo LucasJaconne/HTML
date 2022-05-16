@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens dinâmicas</title>
+</head>
+<body>
+<h1>Imagem dinâmica</h1>
+<p>tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+<!--aqui temos a opção de mudar o tamanho da imagem de acordo com o dispositico e o tamanho da janela do usuário, fazemos isso usando a tag 'sorce' que serve para criar um limite para abrir certa imagem, obs:colocar sempre 50 a mais to tamanho da imagem original. Quando colocar o tamanho, direcionar para o local de pasta a imagem que voce quer abrir, e colocar png em "type=image/png"-->
+<!--o sorce tem q ser do menor para o maior na ordem do código-->
+<picture>
+    <source media="(max-width: 750px )" srcset="imagens/pequeno.png" type="image/png">
+    <source media="(max-width: 1050px )" srcset="imagens/médio.png" type="image/png">
+    <img src="imagens/grande.png" alt="imagens flexiveis">
+</picture>
+<br><br>
+<h2>reproduzindo áudios</h2>
+<p>vamso colocar um audio de fundo nesse site</p>
+<audio src="audio/Mermaid - Kevin MacLeod.mp3" controls autoplay></audio>
+<br>
+<img src="imagens/comando.png" alt="comando"><!--para ficar melhor de visualizar, pode-se usar o autoplay para tentar rodar o audio automaticamente, pode tbm usar o control para criar um controle de audio no site, e um comando de loop-->
+<br><br>
+<h2>Inserindo Vídeo hospedado localmente</h2>
+<p>esse vídeo esta hospedado no meu próprio servidor</p>
+<video controls width="500" poster="imagens/roi.png">
+    <source src="midia/Video.mp4" type="video/mp4">
+    <source src="midia/Video.webm" type="video/webm">
+</video>
+<!--mesmo jeito com o video, porem com a tag video-->
+<!--o consumo de banda nesse modofica inviavel, sonde hospedado pelo meu servidor-->
+<br><br>
+<h2>Inserindo um video do youtube</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FAv0L8WFNqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
