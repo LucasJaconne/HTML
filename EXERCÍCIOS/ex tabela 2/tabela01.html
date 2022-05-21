@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabela 02</title>
+    <style>
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        caption {
+            background-color: darkgray;
+            color: white;
+            font-size: 2.5em;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse; 
+            width: 1000px;
+            position: relative;
+        }
+
+        thead {
+            background-color: darkgrey;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        thead > tr > th {
+            position:sticky ;   /*para deixar o cabeçalho fixo, podemos usar a position: sticky, e mexer no top para fixa-lo em cima, lembrando q o table tem q estar em position: relative*/
+            top: 0;
+            background-color: darkgrey;
+
+        }
+
+        /*
+        tbody > tr:nth-child(2n) {   efeito "nth-child(Xn)" pra dxar as colunas separadas por linhas de acordo com o comando, aqui usamos "2n", que é uma sim e uma n
+        
+        Da pra usar odd e even, (impar ou par respectivamente)
+
+        
+            background-color: rgb(197, 224, 197);
+        }
+        */
+
+        tbody > tr:nth-child(even) {
+            background-color: rgb(255, 255, 255);
+        }
+        tbody > tr:nth-child(odd) {
+            background-color: rgb(253, 232, 175);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .num {
+            text-align: right;
+            width: 50px;
+        }
+
+        tfoot {
+            background-color: darkgrey;
+            color: white;
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        CAPTION = uma legenda para a tebela
+        TABLE
+            THEAD
+                tr 
+                    td, th
+            TBODY
+                tr 
+                    td, th
+            TFOOT
+                tr 
+                    td, th
+
+
+            Para entendr a semantica exata, podemos colocar "scope" para os th, para que saja realizada uma identificação exata
+
+            Podemos usar o scope "col" para coluna
+                               e "row" para linha
+
+        -->
+
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Únidade Federativa</th>
+                <th scope="col">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">46 649 132</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 411 923</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 463 349	</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 985 284	</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 597 484</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 466 630</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 674 793</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9 240 580</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 777 124</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7 338 473</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 206 589</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 206 589</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 206 589</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 206 589</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 206 589</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 206 589</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num">0000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
